@@ -1,0 +1,35 @@
+.padding35 {
+    padding-left:5px;
+    padding-bottom:5px;  
+    padding-top:5px; 
+  
+    }
+    .pad{
+      max-height: calc(100vh - 5.1rem);
+      text-align: center;
+    //   overflow-y:auto; 
+    }
+    .greet{
+      font-size: 21px;
+    margin-top: -21px;
+    }
+  
+    .container {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      font-size: 14px;
+    }
+    .data {
+      height: calc(100vh-5.0rem);
+      overflow: auto;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      width:100%;
+    }
+  
+    h6{
+      color:#294661;
+      font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+      margin-bottom: .5rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }

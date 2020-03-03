@@ -1,0 +1,36 @@
+.personal-details{
+    margin-top: 80px;
+    text-align: center;
+}
+
+
+.parent-div{
+    position: relative;
+    margin-bottom: 8px;
+}
+.label-name{
+    position: absolute;
+    left: 14%;
+}
+.all-form-control{
+    height: 250px;
+    width: 25%;
+    display: inline-block;
+    background-color: white;
+}
+.form-control{
+    background: #fff;
+    border: 1px solid #ddd;
+    outline: 0;
+    width: 72%;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 9px;
+    line-height: normal;
+    color: #474747;
+    font-family: ProximaNova-Regular;
+    letter-spacing: .9px;
+    position: relative;
+}
+
+

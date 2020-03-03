@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgOtpInputModule } from  'ng-otp-input';
+import {OrganisationRegistrationFormModule} from './organisation-registration-form/organisation-registration-form.module'
+
 
 @NgModule({
   declarations: [
@@ -10,9 +13,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgOtpInputModule,
+    OrganisationRegistrationFormModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,87 @@
+<div class="personal-details">
+    <h2>Add your company details</h2>
+    <p>lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+    <form [formGroup]='companyDetailsForm' (submit)="onSubmit(companyDetailsForm.value)">
+        <div class="all-form-control">
+            <div class="col-12 d-flex logo_form">
+                <div class="image-upload col-6">
+                    <input type="file" id="image_upload" class="image-upload-input" accept="image/*">
+                    <label for="image_upload" class="add-image">
+                        <img src="assets/images/add_cat_dummy.svg" />
+                    </label>
+                </div>
+                <div class="logo_heading">
+                    <label class="heading-l2 col-6">
+                        <ng-container>Upload your company logo</ng-container>
+                    </label>
+                </div>
+            </div>
+            <div class="parent-div" style="margin-top: 12px;">
+                <div class="label-name"><label>Company Name</label></div><br>
+                <input type="text" class="form-control" formControlName="company_name" placeholder="Company Name"
+                    id="pwd" [ngClass]="{ 'is-invalid': submitted && f.company_name.errors }">
+                <div *ngIf="submitted && f.company_name.errors" class="invalid-feedback">
+                    <div *ngIf="f.company_name.errors.required">Company name is required</div>
+                </div>
+            </div>
+            <div class="parent-div" style="margin-top: 12px;">
+                <div class="label-name"><label>Email Id</label></div><br>
+                <input type="text" class="form-control" formControlName="email" placeholder="robinssingh155@gmail.com"
+                    id="pwd" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div>
+            </div>
+            <div class="parent-div" style="margin-top: 12px;">
+                <div class="label-name"><label>Job Title</label></div><br>
+                <input type="text" class="form-control" formControlName="job_title" placeholder="Job title" id="pwd"
+                    [ngClass]="{ 'is-invalid': submitted && f.job_title.errors }">
+                <div *ngIf="submitted && f.job_title.errors" class="invalid-feedback">
+                    <div *ngIf="f.job_title.errors.required">Job title is required</div>
+                </div>
+            </div>
+
+
+
+            <div class="parent-div">
+                <div class="label-name"><label>Choose a category</label></div><br>
+                <select id="deplist" class="form-control custom" formControlName="category" placeholder="state"
+                    [ngClass]="{ 'is-invalid': submitted && f.category.errors }" style="height:36px;width: 78%;">
+                    <option hidden value="" selected>Choose a category </option>
+                    <option value="Food">Food</option>
+                    <option value="Laundry">Laundry</option>
+                    <option value="Freeliencer">Freeliencer</option>
+                    <option value="Slads">Slads</option>
+                    <option value="Others">Others</option>
+                </select>
+                <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+                    <div *ngIf="f.category.errors.required">Category is required</div>
+                </div>
+            </div>
+            <div class="form-group term_condition">
+                <div class="term-and-condition-checkbox "
+                    [ngClass]="{'error-terms-required':(companyDetailsForm.controls.agree_with_terms_and_conditions.invalid && !companyDetailsForm.controls.agree_with_terms_and_conditions.pristine)}">
+                    <input type="checkbox" style="cursor: pointer"
+                        [ngClass]="{'error':(companyDetailsForm.controls.agree_with_terms_and_conditions.invalid && !companyDetailsForm.controls.agree_with_terms_and_conditions.pristine)}"
+                        required="required" formControlName="agree_with_terms_and_conditions"
+                        ng-model="agree_with_terms_and_conditions"
+                        class="ng-untouched ng-invalid ng-invalid-required ng-dirty error">
+
+                </div>
+                <div>
+                    <ng-container>I accept the Terms and Conditions</ng-container>
+                </div>
+            </div>
+            <div class="register-button">
+                <button class="btn btn-block form-control" type="submit"
+                    style="width: 20%; background-color: #17acc0;color: white;"
+                    [routerLink]="['/personal-details']">Back</button>
+                <button class="btn btn-block form-control" type="submit"
+                    style="width: 58%; background-color: #17acc0;color: white;">Next</button>
+            </div>
+
+
+        </div>
+    </form>
+</div>

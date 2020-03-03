@@ -1,0 +1,39 @@
+<div class="personal-details">
+    <h2>Login details</h2>
+    <form [formGroup]='loginDetailsForm' (submit)="onSubmit(loginDetailsForm.value)">
+        <div class="all-form-control">
+            <div class="parent-div" style="margin-top: 12px;">
+                <div class="label-name"><label>Email Id</label></div><br>
+                <input type="text" class="form-control" formControlName="email" placeholder="robinssingh155@gmail.com"
+                    id="pwd" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+
+                </div>
+            </div>
+
+            <div class="parent-div" style="margin-top: 12px;">
+                <div class="label-name"><label>Password</label></div><br>
+                <input type="password" class="form-control" formControlName="password" placeholder="password" id="pwd"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="login-button">
+                <button class="btn btn-block form-control" type="submit"
+                    style="width: 78%; background-color: #17acc0;color: white;">Login</button>
+            </div>
+            <div>
+                <p class=" text-left">Don't have an account? <a style="color: #17acc0;"
+                        [routerLink]="['/personal-details']">Sign Up?</a></p>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,90 @@
+<div class="personal-details">
+  <h2>Add your personal details</h2>
+  <p>lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+  <form [formGroup]='personalDetailsForm' (submit)="onSubmit(personalDetailsForm.value)">
+    <div class="all-form-control">
+      <div class="parent-div" style="margin-top: 12px;">
+        <div class="label-name"><label>Full Name</label></div><br>
+        <input type="text" class="form-control" formControlName="fullName" placeholder="Full Name" id="pwd"
+          [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }">
+        <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+          <div *ngIf="f.fullName.errors.required">Full name is required</div>
+        </div>
+      </div>
+      <div class="parent-div">
+        <div class="label-name"><label>Gender</label></div><br>
+        <div class="gender-list">
+          <button class="btn gender-btn" type="button" (click)="genderTypes('male')"
+            [ngClass]="{'active':activeTableId==1}" style="border-radius:0px !important;width: 80px;
+            height: 40px;">
+            Male
+          </button>
+          <button class="btn gender-btn" type="button" (click)="genderTypes('female')"
+            [ngClass]="{'active':activeTableId==2}" style="border-radius:0px !important;    width: 80px;
+            height: 40px;">
+            Female
+          </button>
+          <button class="btn gender-btn" type="button" (click)="genderTypes('other')"
+            [ngClass]="{'active':activeTableId==3}" style="border-radius:0px !important;    width: 80px;
+            height: 40px;">
+            other
+          </button>
+        </div>
+      </div>
+
+      <div class="parent-div">
+        <div class="label-name"><label>Country</label></div><br>
+        <select id="deplist" class="form-control custom" formControlName="country" placeholder="country"
+          [ngClass]="{ 'is-invalid': submitted && f.country.errors }" style="height:36px;width: 78%;">
+          <option hidden value="" selected>Country </option>
+          <option value="India">India</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Frontend">China</option>
+          <option value="China">America</option>
+          <option value="Russia">Russia</option>
+          <option value="Others">Others</option>
+        </select>
+        <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+          <div *ngIf="f.country.errors.required">Country name is required</div>
+        </div>
+      </div>
+      <div class="parent-div">
+        <div class="label-name"><label>State</label></div><br>
+        <select id="deplist" class="form-control custom" formControlName="state" placeholder="state"
+          [ngClass]="{ 'is-invalid': submitted && f.state.errors }" style="height:36px;width: 78%;">
+          <option hidden value="" selected>State </option>
+          <option value="Bihar">Bihar</option>
+          <option value="Banglore">Banglore</option>
+          <option value="Goa">Goa</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Others">Others</option>
+        </select>
+        <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+          <div *ngIf="f.state.errors.required">State name is required</div>
+        </div>
+      </div>
+      <div class="parent-div">
+        <div class="label-name"><label>Phone</label></div><br>
+        <input type="number" class="form-control" formControlName="phone" placeholder="Search User Name" id="pwd"
+          [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+        <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+          <div *ngIf="f.phone.errors.required">Phone number is required</div>
+          <div *ngIf="f.phone.errors.minlength">Phone must be at least 10 number</div>
+          <div *ngIf="f.phone.errors.maxlength">Phone must be at least 10 number</div>
+        </div>
+      </div>
+
+      <div class="register-button">
+        <button class="btn btn-block form-control" type="submit"
+          style="width: 78%; background-color: #17acc0;color: white;">Next</button>
+
+
+      </div>
+      <div>
+        <p class="custom_register_span text-left">Already have an account? <a style="color: #17acc0;"
+            [routerLink]="['/login']">Login</a></p>
+      </div>
+
+    </div>
+  </form>
+</div>

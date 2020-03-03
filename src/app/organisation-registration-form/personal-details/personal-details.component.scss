@@ -1,0 +1,54 @@
+.personal-details{
+    margin-top: 80px;
+    text-align: center;
+}
+.gender-btn{
+    background-color: #17acc0;
+    border-radius:0px !important;
+    color:white;
+    border-right: 1px solid #ebebeb;
+    padding: 10px 20px!important;
+  height: auto;
+  cursor: pointer;
+  line-height: 1.6;
+  width: 123px;
+  }
+.gender-list>.gender-btn.active{
+// color:blue;
+background-color:white !important;
+ border-bottom:#17acc0;
+ border-width: 2px;
+ border-style: solid;
+ color: black;
+}
+.parent-div{
+    position: relative;
+    margin-bottom: 8px;
+}
+.label-name{
+    position: absolute;
+    left: 14%;
+}
+.all-form-control{
+    height: 447px;
+    width: 25%;
+    display: inline-block;
+    background-color: white;
+}
+.form-control{
+    background: #fff;
+    border: 1px solid #ddd;
+    outline: 0;
+    width: 72%;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 9px;
+    line-height: normal;
+    color: #474747;
+    font-family: ProximaNova-Regular;
+    letter-spacing: .9px;
+    position: relative;
+}
+.icon-green{
+    color: green
+  }

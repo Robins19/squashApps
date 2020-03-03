@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "squash-apps": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "squash-apps"
+    }
+  },
+  "defaultProject": "squash-apps",
+  "cli": {
+    "analytics": "04e0146a-94bf-4b72-adbf-6fea47c3ea2b"
+  }
 }
